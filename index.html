@@ -1,77 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kunal M - Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css"/>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kunal M | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{background:#0f172a;color:#fff;overflow:hidden}
+.slide{display:none;max-width:900px;margin:auto;padding:40px;text-align:center;min-height:100vh;justify-content:center;align-items:center;flex-direction:column}
+.slide.active{display:flex}
+img{width:220px;height:220px;border-radius:12px;object-fit:cover;box-shadow:0 0 25px #38bdf8}
+h1{font-size:42px;color:#38bdf8;margin:20px 0}
+h2{color:#facc15;margin:15px 0}
+p,li{color:#cbd5e1;line-height:1.7}
+.card{background:#1e293b;padding:18px;border-radius:10px;margin:15px 0;text-align:left;width:100%}
+.skills span{display:inline-block;background:#38bdf8;color:#000;padding:8px 14px;border-radius:30px;margin:5px;font-weight:bold}
+.nav{position:fixed;bottom:20px;left:50%;transform:translateX(-50%)}
+button{padding:10px 22px;margin:5px;border:none;border-radius:6px;background:#38bdf8;font-weight:bold;cursor:pointer}
+a{color:#38bdf8;text-decoration:none}
+</style>
 </head>
 <body>
 
-  <div class="slide-container">
+<section class="slide active">
+<img src="https://i.postimg.cc/kMjYzB9g/kuna-photo.jpg" alt="Kunal">
+<h1>Kunal M</h1>
+<h2>Frontend Developer | Java Developer | DevOps Learner</h2>
+<p>Computer Science Engineering student with foundational knowledge of Linux, Docker, Cloud Computing, Networking, Git/GitHub and Full Stack Development. Passionate about DevOps, automation and scalable web applications.</p>
+<p><b>📍 Theni, Tamil Nadu</b><br>📞 +91-7845524394<br>📧 Inna542006@gmail.com</p>
+<p><a href="https://github.com/kunal123-ui">GitHub</a> | <a href="https://www.linkedin.com/">LinkedIn</a></p>
+</section>
 
-    <!-- Slide: About -->
-    <section class="slide active" id="about">
-     <div class="square-image">
-  <img src="https://i.postimg.cc/kMjYzB9g/kuna-photo.jpg" alt="Kunal M" />
+<section class="slide">
+<h1>Education</h1>
+<div class="card">
+<h2>Jai Shriram Engineering College</h2>
+<p>B.E. Computer Science and Engineering (2023–2027)</p>
+<p>CGPA: 7.69 / 10</p>
+</div>
+<div class="card">
+<h2>Palaniappa Memorial Hr. Sec. School</h2>
+<p>HSC – Computer Science & Mathematics (2022–2023)</p>
+<p>73%</p>
+</div>
+</section>
+
+<section class="slide">
+<h1>Skills</h1>
+<div class="skills">
+<span>Java</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
+<span>React.js</span><span>Bootstrap</span><span>Linux</span>
+<span>MongoDB</span><span>SQL</span><span>Git</span><span>GitHub</span>
+<span>Docker</span><span>Postman</span><span>VS Code</span>
+<span>Figma</span><span>VMware</span><span>Cloud Computing</span>
+</div>
+</section>
+
+<section class="slide">
+<h1>Projects</h1>
+<div class="card"><h2>Food Delivery Platform (MERN)</h2><p>JWT authentication, Stripe payments, Cloudinary storage, Groq AI chatbot, deployed using Vercel & Render.</p></div>
+<div class="card"><h2>LegalScan-AI</h2><p>AI-powered blockchain-based product verification system with mobile companion app.</p></div>
+<div class="card"><h2>Online Quiz Application</h2><p>MERN quiz platform with authentication, score tracking and admin management.</p></div>
+</section>
+
+<section class="slide">
+<h1>Internship & Certifications</h1>
+<div class="card">
+<h2>NoviTech R&D Pvt. Ltd.</h2>
+<p>Full Stack Development Intern (Jun 2025 – Jul 2025)</p>
+<ul>
+<li>Built React.js and Node.js applications.</li>
+<li>Designed REST APIs with MongoDB.</li>
+<li>Used Git & GitHub for collaboration.</li>
+</ul>
+</div>
+<div class="card">
+<h2>Certifications</h2>
+<ul>
+<li>AWS Educate – Cloud 101</li>
+<li>IBM SkillsBuild – AI Fundamentals</li>
+<li>Google Cloud Computing Foundations</li>
+<li>LinkedIn Learning – Career Skills in Data Analytics</li>
+<li>Google AI Agents Intensive Program</li>
+</ul>
+</div>
+</section>
+
+<div class="nav">
+<button onclick="prev()">⬅ Back</button>
+<button onclick="next()">Next ➡</button>
 </div>
 
-      </div>
-      <h1>Hi, I'm <span>Kunal M</span></h1>
-      <h2>Fullstack Developer & Java Developer</h2>
-      <p>
-        I'm a Computer Science student passionate about building fast, scalable web page and learning new technologies.
-      </p>
-    </section>
+<script>
+const slides=document.querySelectorAll(".slide");
+let i=0;
+function show(){slides.forEach((s,n)=>s.classList.toggle("active",n===i));}
+function next(){i=(i+1)%slides.length;show();}
+function prev(){i=(i-1+slides.length)%slides.length;show();}
+</script>
 
-    <!-- Slide: Projects -->
-    <section class="slide" id="projects">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>🌐 My Portfolio Website</h3>
-        <p>Built using HTML, CSS, and JS to showcase my skills and projects.</p>
-      </div>
-      <div class="project-card">
-        <h3>🛡️ Guardian Vision</h3>
-        <p>AI-powered object detection using OpenCV and TensorFlow.</p>
-      </div>
-    </section>
-
-    <!-- Slide: Skills -->
-    <section class="slide" id="skills">
-      <h2>Skills</h2>
-      <div class="skill-group">
-        <h3>💻 Programming Languages</h3>
-        <div class="skill-buttons">
-          <span class="skill-btn">Java</span>
-          <span class="skill-btn">C</span>
-          <span class="skill-btn">Python</span>
-          <span class="skill-btn">JavaScript</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>🛠 Tools</h3>
-        <div class="skill-buttons">
-          <span class="skill-btn">VS Code</span>
-          <span class="skill-btn">Figma</span>
-          <span class="skill-btn">GitHub</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>🚀 Frameworks</h3>
-        <div class="skill-buttons">
-          <span class="skill-btn">ReactJS (Beginner)</span>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Navigation Buttons -->
-  <div class="nav-buttons">
-    <button onclick="prevSlide()">⬅ Back</button>
-    <button onclick="nextSlide()">Next ➡</button>
-  </div>
-
-  <script src="portfolio.js"></script>
 </body>
 </html>
