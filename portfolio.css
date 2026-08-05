@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  animation: fade 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+
+.square-image {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #38bdf8, 0 0 40px rgba(56, 189, 248, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 12px; /* optional: gives soft square edges */
+}
+
+.square-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 36px;
+  color: #38bdf8;
+  margin-top: 10px;
+}
+
+h1 span {
+  color: #facc15;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #cbd5e1;
+}
+
+p {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.project-card {
+  background-color: #1e293b;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #facc15;
+  margin-bottom: 5px;
+}
+
+.skill-group {
+  margin: 20px 0;
+}
+
+.skill-group h3 {
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.skill-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill-btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #0ea5e9;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

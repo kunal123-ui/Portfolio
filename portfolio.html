@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kunal M - Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <div class="slide-container">
+
+    <!-- Slide: About -->
+    <section class="slide active" id="about">
+     <div class="square-image">
+  <img src="https://i.postimg.cc/kMjYzB9g/kuna-photo.jpg" alt="Kunal M" />
+</div>
+
+      </div>
+      <h1>Hi, I'm <span>Kunal M</span></h1>
+      <h2>Frontend Developer & Java Enthusiast</h2>
+      <p>
+        I'm a Computer Science student passionate about building fast, scalable web page and learning new technologies.
+      </p>
+    </section>
+
+    <!-- Slide: Projects -->
+    <section class="slide" id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>🌐 My Portfolio Website</h3>
+        <p>Built using HTML, CSS, and JS to showcase my skills and projects.</p>
+      </div>
+      <div class="project-card">
+        <h3>🛡️ Guardian Vision</h3>
+        <p>AI-powered object detection using OpenCV and TensorFlow.</p>
+      </div>
+    </section>
+
+    <!-- Slide: Skills -->
+    <section class="slide" id="skills">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>💻 Programming Languages</h3>
+        <div class="skill-buttons">
+          <span class="skill-btn">Java</span>
+          <span class="skill-btn">C</span>
+          <span class="skill-btn">Python</span>
+          <span class="skill-btn">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>🛠 Tools</h3>
+        <div class="skill-buttons">
+          <span class="skill-btn">VS Code</span>
+          <span class="skill-btn">Figma</span>
+          <span class="skill-btn">GitHub</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>🚀 Frameworks</h3>
+        <div class="skill-buttons">
+          <span class="skill-btn">ReactJS (Beginner)</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <button onclick="prevSlide()">⬅ Back</button>
+    <button onclick="nextSlide()">Next ➡</button>
+  </div>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
